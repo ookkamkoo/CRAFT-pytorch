@@ -86,7 +86,7 @@ def test_net(net, image, text_threshold, link_threshold, low_text, cuda, poly, r
 
     # make score and link map
     score_text = y[0,:,:,0].cpu().data.numpy()
-    score_link = y[0,:,:,1].cpu().data.numpy()
+    score_link = y[0,:,:,0].cpu().data.numpy()
 
     # refine link
     if refine_net is not None:
